@@ -1,0 +1,44 @@
+plugins {
+    id 'application'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.0'
+    id "com.github.johnrengelman.shadow" version "5.2.0"
+}
+
+group 'cgg.scala'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'gg.scala.mango.MangoStandaloneApplication'
+
+repositories {
+    mavenCentral()
+
+    maven { url 'https://m2.dv8tion.net/releases' }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.6.0'
+    implementation "net.dv8tion:JDA:4.3.0_324"
+    implementation 'com.github.ReflxctionDev:cub:1.8.1'
+
+    implementation 'com.xenomachina:kotlin-argparser:2.0.7'
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    implementation 'com.google.guava:guava:31.0.1-jre'
+
+    implementation 'com.github.niggerretard:data-store:0249e4d2a5'
+}
+
+compileKotlin {
+    kotlinOptions.useIR = true
+    kotlinOptions.javaParameters = true
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8
+}
+
+shadowJar {
+    archiveClassifier.set("")
+
+    archiveFileName = "Mango.jar"
+}
+
+tasks.build.dependsOn(shadowJar)
