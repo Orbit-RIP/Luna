@@ -4,10 +4,10 @@ plugins {
     id "com.github.johnrengelman.shadow" version "5.2.0"
 }
 
-group 'cgg.scala'
+group 'crip.orbit'
 version '1.0-SNAPSHOT'
 
-mainClassName = 'gg.scala.mango.MangoStandaloneApplication'
+mainClassName = 'rip.orbit.lunaStandaloneApplication'
 
 repositories {
     mavenCentral()
@@ -26,7 +26,7 @@ dependencies {
 
     implementation 'com.google.guava:guava:31.0.1-jre'
 
-    implementation 'com.github.niggerretard:data-store:0249e4d2a5'
+    implementation 'com.github.GrowlyX:data-store:0249e4d2a5'
 }
 
 compileKotlin {
@@ -38,7 +38,7 @@ compileKotlin {
 shadowJar {
     archiveClassifier.set("")
 
-    archiveFileName = "Mango.jar"
+    archiveFileName = "luna.jar"
 }
 
 tasks.build.dependsOn(shadowJar)
