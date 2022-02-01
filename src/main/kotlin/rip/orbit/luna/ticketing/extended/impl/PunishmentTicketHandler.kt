@@ -22,7 +22,7 @@ class PunishmentTicketHandler : ExtendedTicketHandler {
                 "**Punishment Support**",
                 "This ticket has been marked as a punishment appeal ticket.",
                 "",
-                "> Please provide your punishment ID so we can look into why you were punished."
+                "> Please provide your full IGN any any linked accounts so we can look into why you were punished."
             )
         }
     }
