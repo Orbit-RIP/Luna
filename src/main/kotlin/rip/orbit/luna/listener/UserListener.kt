@@ -327,7 +327,7 @@ object UserListener : ListenerAdapter()
             ticket.sendMessage(
                 MangoUtil.getDefaultEmbed(
                     "**Support**",
-                    "Thanks for contacting Orbit Support! Please answer the questions provided below until one of our support members are available.\n\nCreated By: " + event.member!!
+                    "Thanks for contacting Orbit Support! Please answer the questions provided below until one of our support members are available.\n*Use -close to shut this ticket*\nCreated By: " + event.member!!
                         .user.asMention
                 ).build()
             ).queue()
