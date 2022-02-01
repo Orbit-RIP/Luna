@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit
  * @since 9/17/2021
  */
 @Command(
-    "mango",
+    "luna",
     aliases = ["lunaad", "lunaconfig", "lunaadmin"]
 )
 object LunaAdminCommand : ListenerAdapter()
@@ -40,7 +40,7 @@ object LunaAdminCommand : ListenerAdapter()
             "https://i.imgur.com/GgqY0jK.png"
         )
         embed.setTitle("Hello there! Welcome to our Discord \uD83D\uDC4B")
-        embed.setImage("https://media.discordapp.net/attachments/906652259327291422/906990622894866432/BAREMBED_10.png")
+        embed.setImage("https://i.imgur.com/f04hAVE.png")
 
         embed.setDescription(
             """
@@ -76,11 +76,11 @@ object LunaAdminCommand : ListenerAdapter()
             "https://i.imgur.com/GgqY0jK.png"
         )
         embed.setTitle("Our Discord Server Guidelines \uD83D\uDCDC")
-        embed.setImage("https://media.discordapp.net/attachments/906652259327291422/906971176100851772/BAREMBED_9.png")
+        embed.setImage("https://i.imgur.com/f04hAVE.png")
 
         embed.setDescription(
             """
-                These rules are constantly updating, so be sure to check back! Major changes will be announced in <#883841239793950720>.
+                These rules are constantly updating, so be sure to check back! Major changes will be announced in <#925879748129853440>.
                 
                 1️⃣ `Don't be Toxic, and don't start Drama`
                 Toxicity will result in a mute, Drama doesn't belong here either.
@@ -119,13 +119,13 @@ object LunaAdminCommand : ListenerAdapter()
             "https://i.imgur.com/GgqY0jK.png"
         )
         embed.setTitle("Welcome to Orbit's Official Discord \uD83D\uDC4B")
-        embed.setImage("https://media.discordapp.net/attachments/906652259327291422/906967308759617566/BAREMBED_7.png")
+        embed.setImage("https://i.imgur.com/f04hAVE.png")
 
         embed.setDescription(
             """
                 Hey there! We wish you a warm welcome to the **Official Orbit Discord Server**!
                 
-                Orbit is a Competitive PvP Minecraft Server, striving to give you the best experience possible experience throughout our network, which currently supports Minecraft versions **1.7.10 through 1.12.x**.
+                Orbit is a Competitive PvP Minecraft Server, striving to give you the best experience possible experience throughout our network, which currently supports Minecraft versions **1.7.10 through 1.8.9x**.
                 
                 Below you can find a series of buttons, which enables you to look through our information menu. By clicking on one of the buttons, an embed will be sent to this chat, which only you can see.
                 
@@ -160,7 +160,7 @@ object LunaAdminCommand : ListenerAdapter()
                     "https://i.imgur.com/GgqY0jK.png"
                 )
                 embed.setTitle("Our Server IPs \uD83D\uDCE1")
-                embed.setImage("https://media.discordapp.net/attachments/906652259327291422/907044148249493524/BAREMBED_12.png")
+                embed.setImage("https://i.imgur.com/f04hAVE.png")
 
                 embed.addField(
                     MessageEmbed.Field(
@@ -179,7 +179,7 @@ object LunaAdminCommand : ListenerAdapter()
                 embed.addField(
                     MessageEmbed.Field(
                         "`South America` \uD83C\uDDE7\uD83C\uDDF7",
-                        "sa.orbit.rip", true
+                        "sa.orbit.rip (Not in use)", true
                     )
                 )
 
@@ -284,7 +284,7 @@ object LunaAdminCommand : ListenerAdapter()
             "https://i.imgur.com/GgqY0jK.png"
         )
         embed.setTitle("Create a Support Ticket \uD83C\uDFAB")
-        embed.setImage("https://media.discordapp.net/attachments/906652259327291422/907015753583173712/BAREMBED_11.png")
+        embed.setImage("https://i.imgur.com/f04hAVE.png")
 
         embed.setDescription(
             """
@@ -292,7 +292,7 @@ object LunaAdminCommand : ListenerAdapter()
 
                 **To make a ticket,** click the button below that is marked with ✉️
 
-                **If you're in need of immediate support**, Discord may not be the best option for you. Please connect to our TeamSpeak @ **ts.pvp.bar**
+                **If you're in need of immediate support**, Discord may not be the best option for you. Please connect to our TeamSpeak @ **ts.orbit.rip**
 
                 *Abuse of the ticket system will result in punishment.*
             """.trimIndent()

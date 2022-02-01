@@ -38,7 +38,7 @@ compileKotlin {
 shadowJar {
     archiveClassifier.set("")
 
-    archiveFileName = "luna.jar"
+    archiveFileName = "Luna.jar"
 }
 
 tasks.build.dependsOn(shadowJar)
