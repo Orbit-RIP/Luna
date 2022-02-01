@@ -214,7 +214,7 @@ object UserListener : ListenerAdapter()
 
     override fun onGuildMemberJoin(event: GuildMemberJoinEvent)
     {
-        val channel = event.guild.getTextChannelsByName("arrivals", true)[0]
+        val channel = event.guild.getTextChannelsByName("\uD83D\uDC4Bwelcome", true)[0]
 
         if (kickNow)
         {
