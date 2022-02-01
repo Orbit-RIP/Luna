@@ -139,7 +139,7 @@ object LunaAdminCommand : ListenerAdapter()
                 Button.success("server-ip", "Server IPs"),
                 Button.success("guidelines", "Guidelines"),
                 Button.success("socials", "Socials"),
-                Button.success("faq", "Frequently Asked"),
+                Button.success("applications", "Applications"),
             )
             .queue()
     }
@@ -233,7 +233,7 @@ object LunaAdminCommand : ListenerAdapter()
                 event.deferReply().setEphemeral(true)
                     .addEmbeds(embed.build()).queue()
             }
-            "faq" ->
+            "applications" ->
             {
                 val embed = EmbedBuilder()
                 embed.setColor(Color.decode("#2f3136"))
@@ -241,11 +241,19 @@ object LunaAdminCommand : ListenerAdapter()
                     "Orbit Network · Information Page",
                     "https://i.imgur.com/GgqY0jK.png"
                 )
-                embed.setTitle("FAQs")
+                embed.setTitle("Applications")
 
                 embed.setDescription(
                     """
-                        Frequently Asked Questions is coming very soon!
+                        If you're interested in applying for Staff & Media please use the following links below!
+
+                        > Staff Application: https://forms.gle/38QRcGksyeYEJgnVA
+                        > Media Application: https://forms.gle/47sbjEnzp3FCzNTd8
+
+                        We are looking for **ALL** Media so if you're interested in Streaming or recording then be sure to apply, no matter the size we give exceptions!
+
+                        **NOTE**: If you ask a member of the Head Staff team to read your application, you will be **DENIED**. If you are denied, you may re-apply in **two weeks** time.
+
                     """.trimIndent()
                 )
 

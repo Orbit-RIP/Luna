@@ -32,7 +32,7 @@ object ReactionRolesCommand : ListenerAdapter()
             .build()
 
         context.parentEvent.channel.sendMessage(
-            "**Use the following drop-down menu to select which roles you'd like to equip.**\n*You may remove your roles by simply unselecting the role within the drop-down menu.*"
+            "> Use the **Dropdown** to select the alerts you would like to recieve. \n > **Note**:*You will still be notified of SOTW's and server events* \n> To **remove** a role please **de-select** it from the dropdown"
         ).setActionRow(alertRoleMenu).queue()
     }
 
