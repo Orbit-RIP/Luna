@@ -2,7 +2,7 @@ package rip.orbit.luna.runnable
 
 import com.google.common.io.Files
 import com.google.gson.reflect.TypeToken
-import rip.orbit.luna.MangoStandaloneApplication
+import rip.orbit.luna.lunaStandaloneApplication
 import rip.orbit.luna.util.MangoStatus
 import net.dv8tion.jda.api.entities.Activity
 import java.io.File
@@ -27,7 +27,7 @@ object StatusRunnable : Thread() {
             file, Charsets.UTF_8
         )
 
-        messages = rip.orbit.luna.MangoStandaloneApplication.gson.fromJson(
+        messages = rip.orbit.luna.lunaStandaloneApplication.gson.fromJson(
             reader, dataType
         )
     }
@@ -45,7 +45,7 @@ object StatusRunnable : Thread() {
                     index = 0; messages[0]
                 }
 
-                rip.orbit.luna.MangoStandaloneApplication.client.presence.activity = Activity.of(
+                rip.orbit.luna.lunaStandaloneApplication.client.presence.activity = Activity.of(
                     currentTip.activityType, currentTip.value
                 )
             } catch (exception: Exception)

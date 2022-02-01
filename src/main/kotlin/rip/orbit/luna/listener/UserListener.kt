@@ -1,6 +1,6 @@
 package rip.orbit.luna.listener
 
-import rip.orbit.luna.MangoStandaloneApplication
+import rip.orbit.luna.lunaStandaloneApplication
 import rip.orbit.luna.cache.ExtendedTicketCache
 import rip.orbit.luna.cache.LocaleCache
 import rip.orbit.luna.ticketing.TicketData
@@ -40,7 +40,7 @@ object UserListener : ListenerAdapter()
         val code = memberCodeMap[event.author.idLong]
 
         val privateChannel = event.channel
-        val guild = event.jda.getGuildById(rip.orbit.luna.MangoStandaloneApplication.settings.guild)
+        val guild = event.jda.getGuildById(rip.orbit.luna.lunaStandaloneApplication.settings.guild)
 
         if (rawMessage == code)
         {
@@ -51,7 +51,7 @@ object UserListener : ListenerAdapter()
                 guild.addRoleToMember(event.author.idLong, role).queue()
                 memberCodeMap.remove(event.author.idLong)
 
-                privateChannel.sendMessage("You've been verified in the **${rip.orbit.luna.MangoStandaloneApplication.settings.discordName} Discord**, have fun!")
+                privateChannel.sendMessage("You've been verified in the **${rip.orbit.luna.lunaStandaloneApplication.settings.discordName} Discord**, have fun!")
                     .queue()
             } else
             {
@@ -165,7 +165,7 @@ object UserListener : ListenerAdapter()
                 var ticketManager = event.textChannel.manager.putPermissionOverride(event.member!!, 3072L, 8192L)
                     .putPermissionOverride(event.guild.getRolesByName("@everyone", true)[0], 0L, 1024L)
 
-                for (supportRole in rip.orbit.luna.MangoStandaloneApplication.settings.supportRoles.split(","))
+                for (supportRole in rip.orbit.luna.lunaStandaloneApplication.settings.supportRoles.split(","))
                 {
                     if (event.guild.getRolesByName(supportRole, true).isNotEmpty())
                     {
@@ -225,7 +225,7 @@ object UserListener : ListenerAdapter()
         } else
         {
             channel?.sendMessage(
-                "Welcome to the ${rip.orbit.luna.MangoStandaloneApplication.settings.discordName} Discord Server, " + event.member.asMention + "! \uD83D\uDC4B"
+                "Welcome to the ${rip.orbit.luna.lunaStandaloneApplication.settings.discordName} Discord Server, " + event.member.asMention + "! \uD83D\uDC4B"
             )?.queue()
         }
     }

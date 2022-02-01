@@ -21,7 +21,7 @@ import java.io.File
  * @author Growlyx
  * @since 9/17/2021
  */
-object MangoStandaloneApplication {
+object lunaStandaloneApplication {
 
     val gson: Gson = GsonBuilder()
         .setPrettyPrinting()
@@ -35,14 +35,14 @@ object MangoStandaloneApplication {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        rip.orbit.luna.MangoStandaloneApplication.settings = rip.orbit.luna.MangoStandaloneApplication.gson.fromJson(
+        rip.orbit.luna.lunaStandaloneApplication.settings = rip.orbit.luna.lunaStandaloneApplication.gson.fromJson(
             Files.newReader(
                 File("settings.json"), Charsets.UTF_8
             ),
             rip.orbit.luna.MangoArgs::class.java
         )
 
-        rip.orbit.luna.MangoStandaloneApplication.client = JDABuilder.createDefault(rip.orbit.luna.MangoStandaloneApplication.settings.token)
+        rip.orbit.luna.lunaStandaloneApplication.client = JDABuilder.createDefault(rip.orbit.luna.lunaStandaloneApplication.settings.token)
             .enableIntents(
                 GatewayIntent.GUILD_BANS,
                 GatewayIntent.GUILD_MESSAGE_REACTIONS,
@@ -59,15 +59,15 @@ object MangoStandaloneApplication {
         LocaleCache.initialLoad()
         DiscordLinkHandler.initialLoad()
 
-        rip.orbit.luna.MangoStandaloneApplication.client.awaitReady().let {
-            rip.orbit.luna.MangoStandaloneApplication.commandHandler = JDACommandHandler.create(
+        rip.orbit.luna.lunaStandaloneApplication.client.awaitReady().let {
+            rip.orbit.luna.lunaStandaloneApplication.commandHandler = JDACommandHandler.create(
                 it, JDACommandHandler.Settings.builder()
                     .prefix("!")
                     .stripMarkdown(false)
                     .build()
             )
 
-            rip.orbit.luna.MangoStandaloneApplication.commandHandler.registerCommand(
+            rip.orbit.luna.lunaStandaloneApplication.commandHandler.registerCommand(
                 LunaAdminCommand,
                 CloseCommand(),
                 AnnounceCommand(),

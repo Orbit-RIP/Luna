@@ -1,6 +1,6 @@
 package rip.orbit.luna.util
 
-import rip.orbit.luna.MangoStandaloneApplication
+import rip.orbit.luna.lunaStandaloneApplication
 import net.dv8tion.jda.api.EmbedBuilder
 import net.dv8tion.jda.api.entities.TextChannel
 import java.awt.Color
@@ -15,7 +15,7 @@ object MangoUtil {
     fun getDefaultEmbed(title: String, vararg description: String): EmbedBuilder {
         return EmbedBuilder()
             .setTitle(title).setDescription(description.joinToString(separator = "\n"))
-            .setColor(Color.decode(rip.orbit.luna.MangoStandaloneApplication.settings.primary))
+            .setColor(Color.decode(rip.orbit.luna.lunaStandaloneApplication.settings.primary))
     }
 
     @JvmStatic

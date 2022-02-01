@@ -1,6 +1,6 @@
 package rip.orbit.luna.runnable
 
-import rip.orbit.luna.MangoStandaloneApplication
+import rip.orbit.luna.lunaStandaloneApplication
 import kotlin.properties.Delegates
 
 /**
@@ -9,7 +9,7 @@ import kotlin.properties.Delegates
  */
 object DisplayNameUpdater : Thread()
 {
-    private val client = rip.orbit.luna.MangoStandaloneApplication.client
+    private val client = rip.orbit.luna.lunaStandaloneApplication.client
 
     private val mappings = mutableMapOf(
         925872233031802940L to "PA",

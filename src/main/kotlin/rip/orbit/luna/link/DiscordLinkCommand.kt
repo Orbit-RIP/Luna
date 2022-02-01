@@ -1,6 +1,6 @@
 package rip.orbit.luna.link
 
-import rip.orbit.luna.MangoStandaloneApplication
+import rip.orbit.luna.lunaStandaloneApplication
 import io.github.revxrsal.cub.annotation.Command
 import io.github.revxrsal.cub.annotation.Cooldown
 import io.github.revxrsal.cub.jda.JDACommandSubject
