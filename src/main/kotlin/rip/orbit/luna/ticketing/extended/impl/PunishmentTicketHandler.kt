@@ -6,7 +6,7 @@ import rip.orbit.luna.util.MangoUtil.sendMessage
 import net.dv8tion.jda.api.entities.Member
 
 /**
- * @author GrowlyX
+ * @author niggerretard
  * @since 7/20/2021
  */
 class PunishmentTicketHandler : ExtendedTicketHandler {
@@ -22,7 +22,7 @@ class PunishmentTicketHandler : ExtendedTicketHandler {
                 "**Punishment Support**",
                 "This ticket has been marked as a punishment appeal ticket.",
                 "",
-                "> Please provide your full IGN and your version of events so we can look into why you were punished."
+                "> Please provide your punishment ID so we can look into why you were punished."
             )
         }
     }

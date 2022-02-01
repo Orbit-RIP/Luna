@@ -31,7 +31,7 @@ object DisplayNameUpdater : Thread()
 
     override fun run()
     {
-        val guild = client.getGuildById(842825042886262784)!!
+        val guild = client.getGuildById(925869157126381568)!!
         val members = guild.loadMembers().get()
 
         for (member in members)

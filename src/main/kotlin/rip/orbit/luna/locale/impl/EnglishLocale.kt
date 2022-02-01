@@ -24,7 +24,7 @@ class EnglishLocale : Locale {
                 TicketDataStage.WHY.validResponses
             )
         locale["reason"] = "Why did you create this support ticket?"
-        locale["punish"] = "Provide your full IGN and your version of events as it happened (Use N/A if not punishment related)."
+        locale["punish"] = "Provide your punishment ID (Use N/A if not punishment related)."
         locale["transact"] = "Provide your transaction ID (Use N/A if not store related)."
     }
 
