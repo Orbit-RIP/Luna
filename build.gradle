@@ -7,7 +7,7 @@ plugins {
 group 'crip.orbit'
 version '1.0-SNAPSHOT'
 
-mainClassName = 'rip.orbit.lunaStandaloneApplication'
+mainClassName = 'rip.orbit.luna.lunaStandaloneApplication'
 
 repositories {
     mavenCentral()
