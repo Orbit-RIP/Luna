@@ -62,7 +62,7 @@ object lunaStandaloneApplication {
         rip.orbit.luna.lunaStandaloneApplication.client.awaitReady().let {
             rip.orbit.luna.lunaStandaloneApplication.commandHandler = JDACommandHandler.create(
                 it, JDACommandHandler.Settings.builder()
-                    .prefix("!")
+                    .prefix("-")
                     .stripMarkdown(false)
                     .build()
             )
@@ -72,6 +72,11 @@ object lunaStandaloneApplication {
                 CloseCommand(),
                 AnnounceCommand(),
                 ReactionRolesCommand,
+                IPcommand,
+                TScommand,
+                HelpCommand,
+                LinksCommand,
+                SteelCommand,
                 DiscordLinkCommand,
                 PunishmentCommand
             )
